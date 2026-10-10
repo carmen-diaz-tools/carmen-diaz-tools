@@ -1,0 +1,26 @@
+# Datos reales de la tienda: nunca al repo (es público)
+*.csv
+*.xlsx
+*.xls
+data/privado/
+
+# Claves y configuración local
+.env
+.env.*
+*.key
+*.pem
+
+# Sistema / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Node (solo para tests y scripts locales)
+node_modules/
+npm-debug.log*
+
+# Temporales
+tmp/
+*.tmp

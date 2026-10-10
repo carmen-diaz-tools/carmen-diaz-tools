@@ -1,0 +1,10 @@
+{
+  "name": "carmen-diaz-tools",
+  "private": true,
+  "type": "module",
+  "description": "Herramientas para Lencería Carmen Díaz. Sin dependencias: este archivo solo existe para ejecutar los tests con Node.",
+  "scripts": {
+    "test": "node --test tests/",
+    "serve": "node scripts/serve.js"
+  }
+}
