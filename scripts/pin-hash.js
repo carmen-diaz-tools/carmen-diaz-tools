@@ -3,8 +3,8 @@
 import { createHash } from 'node:crypto';
 
 const pin = process.argv[2] ?? '';
-if (!/^\d{4}$/.test(pin)) {
-  console.error('Escribe un PIN de 4 cifras: node scripts/pin-hash.js 1234');
+if (!/^\d{4,8}$/.test(pin)) {
+  console.error('Escribe un PIN de 4 a 8 cifras: node scripts/pin-hash.js 1234');
   process.exit(1);
 }
 console.log(createHash('sha256').update(`carmen-diaz:${pin}`).digest('hex'));

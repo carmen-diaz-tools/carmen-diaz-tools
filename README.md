@@ -17,7 +17,7 @@ Herramientas:
 
 ## 2. Entrar
 
-Escribe el **código de 4 cifras**. El móvil lo recuerda durante 30 días. Para cerrar antes, pulsa **Salir** en la pantalla de inicio.
+Escribe el **código de 6 cifras**. El móvil lo recuerda durante 30 días. Para cerrar antes, pulsa **Salir** en la pantalla de inicio.
 
 <img src="docs/capturas/01-pin.png" alt="Pantalla de código" width="260"> <img src="docs/capturas/02-inicio.png" alt="Inicio" width="260">
 
@@ -109,8 +109,8 @@ Se quitan tildes y espacios. Los SKU antiguos (`SUJ-SEL-BLA-90C-BLA`) siguen val
 - Sin dependencias ni build: HTML, CSS y JavaScript que GitHub Pages sirve tal cual.
 - `node scripts/serve.js` → http://localhost:8080 para probar en local.
 - `npm test` → tests del Code 128 y del SKU.
-- `node scripts/screenshots.js` (con el servidor arrancado) → prueba de extremo a extremo en Edge sin ventana y capturas en `docs/capturas/`.
-- Cambiar el PIN: `node scripts/pin-hash.js 1234` y pega el resultado en [`app/js/config.js`](app/js/config.js).
+- `PIN=xxxxxx node scripts/screenshots.js` (con el servidor arrancado) → prueba de extremo a extremo en Edge sin ventana y capturas en `docs/capturas/`.
+- Cambiar el PIN: `node scripts/pin-hash.js 123456` y pega el resultado en [`app/js/config.js`](app/js/config.js).
 - Regenerar logo e iconos: `powershell -File scripts/build-assets.ps1 -Logo "ruta\Logo Tienda.png"`.
 - Añadir una herramienta: ver [`app/js/tools.js`](app/js/tools.js).
 - Decisiones de diseño: [`docs/decisiones.md`](docs/decisiones.md).

@@ -3,7 +3,7 @@
 // en docs/capturas/ y la etiqueta a tamaño real en docs/capturas/etiqueta-*.png.
 //
 // Uso: node scripts/serve.js   (en otra terminal)
-//      node scripts/screenshots.js [ruta-al-navegador]
+//      PIN=xxxxxx node scripts/screenshots.js [ruta-al-navegador]
 import { spawn } from 'node:child_process';
 import { mkdir, writeFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
@@ -12,7 +12,11 @@ import { fileURLToPath } from 'node:url';
 
 const BROWSER = process.argv[2] ?? 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe';
 const APP = 'http://localhost:8080/';
-const PIN = process.env.PIN ?? '1234';
+const PIN = process.env.PIN;
+if (!PIN) {
+  console.error('Indica el PIN: PIN=xxxxxx node scripts/screenshots.js');
+  process.exit(1);
+}
 const OUT = fileURLToPath(new URL('../docs/capturas/', import.meta.url));
 const PORT = 9333;
 const wait = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -102,7 +106,8 @@ try {
   await viewport(390, 844, true);
   await go(APP);
   await shot('01-pin', false);
-  for (const d of '0000') await js(`document.querySelector('[data-n="${d}"]').click()`);
+  const wrongPin = (PIN === '0'.repeat(PIN.length) ? '1' : '0').repeat(PIN.length);
+  for (const d of wrongPin) await js(`document.querySelector('[data-n="${d}"]').click()`);
   await wait(500);
   check((await text('.pin-error')).includes('incorrecto'), 'PIN incorrecto rechazado');
   for (const d of PIN) await js(`document.querySelector('[data-n="${d}"]').click()`);

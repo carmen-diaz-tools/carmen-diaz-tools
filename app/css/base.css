@@ -154,7 +154,7 @@ h2 { font-size: 1.05rem; }
   padding: 24px var(--gutter);
   text-align: center;
 }
-.pin img { width: min(260px, 70vw); height: auto; mix-blend-mode: multiply; }
+.pin img { width: min(160px, 45vw); height: auto; border-radius: 24px; }
 .pin-puntos { display: flex; gap: 14px; height: 18px; }
 .pin-puntos span { width: 14px; height: 14px; border-radius: 50%; border: 1.5px solid var(--texto); }
 .pin-puntos span.lleno { background: var(--texto); }
