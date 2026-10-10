@@ -3,7 +3,7 @@
 // sin internet se usa la copia guardada.
 // Si añades archivos nuevos, inclúyelos en ASSETS y sube VERSION.
 
-const VERSION = 'v1';
+const VERSION = 'v2';
 const CACHE = `cd-tools-${VERSION}`;
 
 const ASSETS = [

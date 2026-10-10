@@ -25,7 +25,11 @@ html, body {
   line-height: 1.4;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
+  /* Sin zoom al tocar dos veces rápido (teclado del PIN, botones); el zoom con dos dedos sigue funcionando. */
+  touch-action: manipulation;
 }
+
+button, a, input, select, label { touch-action: manipulation; }
 
 body {
   min-height: 100dvh;
