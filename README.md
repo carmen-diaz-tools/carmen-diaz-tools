@@ -10,7 +10,7 @@ Herramientas:
 
 ## 1. Instalarla en el móvil
 
-1. Abre el enlace de la app en **Chrome** (Android) o en **Safari/Chrome** (iPhone/iPad).
+1. Abre **https://carmen-diaz-tools.github.io/carmen-diaz-tools/** en **Chrome** (Android) o en **Safari/Chrome** (iPhone/iPad).
 2. Android: menú **⋮** → **Añadir a pantalla de inicio** → **Instalar**.
    iPhone/iPad: botón **Compartir** → **Añadir a pantalla de inicio**.
 3. A partir de ahí se abre desde el icono de la percha, como cualquier app.

@@ -11,7 +11,7 @@ import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const BROWSER = process.argv[2] ?? 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe';
-const APP = 'http://localhost:8080/';
+const APP = process.env.APP ?? 'http://localhost:8080/';
 const PIN = process.env.PIN;
 if (!PIN) {
   console.error('Indica el PIN: PIN=xxxxxx node scripts/screenshots.js');
